@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace PlantShop.Models
 {
     using static DataConstants.User;
+
     public class User : IdentityUser
     {
         [MaxLength(FirstNameMaxLength)]

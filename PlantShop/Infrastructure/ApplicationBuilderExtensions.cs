@@ -1,8 +1,8 @@
 ﻿using PlantShop.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 using PlantShop.Areas.Admin;
 using PlantShop.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace MountainTrip.Infrastructure
 {

@@ -2,7 +2,7 @@
 {
     public class DataConstants
     {
-        public class User 
+        public class User
         {
             public const int FirstNameMinLength = 2;
             public const int FirstNameMaxLength = 30;
