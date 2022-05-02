@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b1L5bKL2u5kA/zNuNicjwMjygRrdJmwLK6ymfp3kYr0=",
+  "Hash": "W42SjYmWfwfGR4e3I0GJ3KFnU5FDWPZ/SgZaqiAs1Jo=",
   "Source": "PlantShop",
   "BasePath": "_content/PlantShop",
   "Mode": "Default",
@@ -1088,12 +1088,12 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\Repos\\PlantShop\\PlantShop\\wwwroot\\favicon.ico",
+      "Identity": "E:\\Repos\\PlantShop\\PlantShop\\wwwroot\\images\\favicon.png",
       "SourceId": "PlantShop",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Repos\\PlantShop\\PlantShop\\wwwroot\\",
       "BasePath": "_content/PlantShop",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "images/favicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1102,7 +1102,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\images\\favicon.png"
     },
     {
       "Identity": "E:\\Repos\\PlantShop\\PlantShop\\wwwroot\\js\\site.js",
