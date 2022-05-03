@@ -4,11 +4,14 @@
     ViewData["Title"] = "Списък";
 }
 
-<h1 class="text-center">Списък</h1>
+<h1 class="text-center">Списък</h1> <br>
 
-<p>
-    <a asp-action="Create">Създай нов запис</a>
-</p>
+@if (User.IsAdmin())
+{    <p>
+        <a asp-action="Create" class="btn btn-outline-primary">Създай нов запис</a>
+    </p>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -43,9 +46,15 @@
                 @Html.DisplayFor(modelItem => item.Price) лв
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Редактиране</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Детайли</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Изтриване</a>
+                @if (User.IsAdmin())
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">Редактиране</a>
+                }                 
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-success">Детайли</a>               
+                @if (User.IsAdmin())
+                {
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Изтриване</a>
+                }                    
             </td>
         </tr>
 }

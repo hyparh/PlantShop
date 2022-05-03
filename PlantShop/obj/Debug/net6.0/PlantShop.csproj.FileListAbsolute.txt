@@ -826,3 +826,7 @@ E:\Repos\PlantShop\PlantShop\obj\Debug\net6.0\refint\PlantShop.dll
 E:\Repos\PlantShop\PlantShop\obj\Debug\net6.0\PlantShop.pdb
 E:\Repos\PlantShop\PlantShop\obj\Debug\net6.0\PlantShop.genruntimeconfig.cache
 E:\Repos\PlantShop\PlantShop\obj\Debug\net6.0\ref\PlantShop.dll
+E:\Repos\PlantShop\PlantShop\bin\Debug\net6.0\MailKit.dll
+E:\Repos\PlantShop\PlantShop\bin\Debug\net6.0\MimeKit.dll
+E:\Repos\PlantShop\PlantShop\bin\Debug\net6.0\NETCore.MailKit.dll
+E:\Repos\PlantShop\PlantShop\bin\Debug\net6.0\BouncyCastle.Crypto.dll

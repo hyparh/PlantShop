@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MountainTrip.Infrastructure;
 using PlantShop.Data;
 using PlantShop.Models;
 
@@ -24,6 +25,9 @@ builder.Services.AddDefaultIdentity<User>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+//preparing Db from infrastructure folder
+app.PrepareDatabase();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

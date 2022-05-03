@@ -1,20 +1,23 @@
 ﻿using PlantShop.Models.Plants;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PlantShop.Models
 {
     public class Cart
-    {
-        public int Id { get; init; }
+    {        
+        [Key]
+        public string Id { get; set; } = new Guid().ToString();
 
+        public string CartId { get; set; }
 
-        [ForeignKey(nameof(User))]
-        public string UserId { get; set; }
-        public User User { get; set; }
+        public int Quantity { get; set; }
+
+        public System.DateTime DateCreated { get; set; }
 
 
         [ForeignKey(nameof(Plant))]
-        public string PlantId { get; set; }
+        public int PlantId { get; set; }
         public Plant Plant { get; set; }
     }
 }

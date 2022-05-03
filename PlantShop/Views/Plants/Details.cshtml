@@ -35,8 +35,11 @@
         </dl>
     </div>
     <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Редактиране</a> |
-        <a asp-action="Index">Обратно към списъка</a>
+        @if (User.IsAdmin())
+        {
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-outline-primary">Редактиране</a>
+        }        
+        <a asp-action="Index" class="btn btn-outline-primary">Обратно към списъка</a>
     </div>
 </div>
 
