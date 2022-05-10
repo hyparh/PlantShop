@@ -50,8 +50,12 @@
                 {
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">Редактиране</a>
                 }                 
-                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-success">Детайли</a>               
-                @if (User.IsAdmin())
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-success">Детайли</a>    
+                @if (User.Identity.IsAuthenticated && !User.IsAdmin())
+                {
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">Добави в количката</a>
+                }
+                    @if (User.IsAdmin())
                 {
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Изтриване</a>
                 }                    

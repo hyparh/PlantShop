@@ -5,19 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace PlantShop.Models
 {
     public class Cart
-    {        
+    {
         [Key]
-        public string Id { get; set; } = new Guid().ToString();
+        public int Id { get; init; }
 
-        public string CartId { get; set; }
+        [Required]
+        public string UserId { get; set; }
 
-        public int Quantity { get; set; }
-
-        public System.DateTime DateCreated { get; set; }
-
-
-        [ForeignKey(nameof(Plant))]
-        public int PlantId { get; set; }
-        public Plant Plant { get; set; }
+        public ICollection<Plant> Plants { get; set; } = new List<Plant>();
     }
 }

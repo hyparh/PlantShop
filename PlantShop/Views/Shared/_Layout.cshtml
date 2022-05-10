@@ -13,21 +13,29 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-success border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand text-success fw-bold" asp-area="" asp-controller="Plants" asp-action="Index">Plant Shop</a>
+                <a class="navbar-brand text-success fw-bold" asp-area="" asp-controller="Plants" asp-action="Index">
+                    <span class="align-middle">
+                       <img src="~/images/Home-white.png" width="40" heigth="40" />
+                    </span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated && !User.IsAdmin())
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                    <span class="align-middle">
+                                       <img src="~/images/cart-white.png" width="40" heigth="40" />
+                                    </span>
+                                </a>
+                            </li>
+                        }            
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -40,9 +48,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted bg-success">
         <div class="container">
-            &copy; 2022 - Plant Shop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <p class="text-white text-center">&copy; @DateTime.UtcNow.Year - Plant Shop</p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
